@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Satisfação</title>
+</head>
+<body>
+
+    <h1>Pesquisa de Satisfação do Cliente</h1>
+
+    <form action="/enviar-pesquisa" method="post">
+
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            
+            <div>
+                <label for="nome">Nome Completo:</label><br>
+                <input type="text" id="nome" name="nome_cliente" required>
+            </div>
+            
+            <br>
+
+            <div>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email_cliente" required>
+            </div>
+            
+            <br>
+            
+            <div>
+                <label for="telefone">Telefone (opcional):</label><br>
+                <input type="tel" id="telefone" name="telefone_cliente">
+            </div>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Pesquisa</legend>
+
+            <div>
+                <p>1. Em uma escala de 1 a 5, qual o seu nível de satisfação com nosso atendimento?</p>
+                <input type="radio" id="satisfacao_5" name="nivel_satisfacao" value="5" required>
+                <label for="satisfacao_5">5 - Muito Satisfeito</label><br>
+                
+                <input type="radio" id="satisfacao_4" name="nivel_satisfacao" value="4">
+                <label for="satisfacao_4">4 - Satisfeito</label><br>
+                
+                <input type="radio" id="satisfacao_3" name="nivel_satisfacao" value="3">
+                <label for="satisfacao_3">3 - Neutro</label><br>
+                
+                <input type="radio" id="satisfacao_2" name="nivel_satisfacao" value="2">
+                <label for="satisfacao_2">2 - Insatisfeito</label><br>
+                
+                <input type="radio" id="satisfacao_1" name="nivel_satisfacao" value="1">
+                <label for="satisfacao_1">1 - Muito Insatisfeito</label><br>
+            </div>
+
+            <br>
+
+            <div>
+                <p>2. Você recomendaria nossos serviços a um amigo ou colega?</p>
+                <input type="radio" id="recomenda_sim" name="recomendaria" value="sim" required>
+                <label for="recomenda_sim">Sim</label><br>
+                
+                <input type="radio" id="recomenda_nao" name="recomendaria" value="nao">
+                <label for="recomenda_nao">Não</label><br>
+            </div>
+            
+            <br>
+
+            <div>
+                <label for="como_conheceu">3. Como você conheceu nossa empresa?</label><br>
+                <select id="como_conheceu" name="como_conheceu" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="redes_sociais">Redes Sociais</option>
+                    <option value="indicacao">Indicação de um amigo</option>
+                    <option value="pesquisa_online">Pesquisa Online (Google, etc.)</option>
+                    <option value="anuncio">Anúncio</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <br>
+
+        <div>
+            <input type="checkbox" id="autoriza" name="autoriza_compartilhamento" value="sim">
+            <label for="autoriza">Autorizo compartilhar minha resposta anonimamente com terceiros para fins de melhoria de serviço.</label>
+        </div>
+
+        <br>
+
+        <button type="submit">Enviar Pesquisa</button>
+
+    </form>
+
+</body>
+</html>
